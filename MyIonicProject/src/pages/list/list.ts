@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { ItemDetailsPage } from '../item-details/item-details';
+import { ActionSheet } from '../action-sheet/action-sheet';
 
 @Component({
   selector: 'page-list',
@@ -27,7 +28,11 @@ export class ListPage {
   }
 
   itemTapped(event, item) {
-    this.navCtrl.push(ItemDetailsPage, {
+    let itemPage = ItemDetailsPage;
+    if(item.title === 'Item 2') {
+      itemPage = ActionSheet;
+    }
+    this.navCtrl.push(itemPage, {
       item: item
     });
   }

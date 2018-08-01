@@ -6,32 +6,16 @@ import { MyApp } from './app.component';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
+import { ActionSheet } from '../pages/action-sheet/action-sheet';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-  ],
+  declarations: [MyApp,HelloIonicPage,ItemDetailsPage,ListPage,ActionSheet],
+  imports: [BrowserModule,IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  entryComponents: [MyApp,HelloIonicPage,ItemDetailsPage,ListPage,ActionSheet],
+  providers: [StatusBar,SplashScreen,{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
