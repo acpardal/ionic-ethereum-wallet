@@ -5,7 +5,7 @@ import { ActionSheetController } from 'ionic-angular';
     selector: 'page-action-sheet',
     templateUrl: 'action-sheet.html'
   })
-export class ActionSheet {
+export class ActionSheetPage {
 
   constructor(public actionSheetCtrl: ActionSheetController) { }
 

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { ItemDetailsPage } from '../item-details/item-details';
-import { ActionSheet } from '../action-sheet/action-sheet';
+import { ActionSheetPage } from '../action-sheet/action-sheet';
 
 @Component({
   selector: 'page-list',
@@ -28,12 +28,12 @@ export class ListPage {
   }
 
   itemTapped(event, item) {
-    let itemPage = ItemDetailsPage;
     if(item.title === 'Item 2') {
-      itemPage = ActionSheet;
+      this.navCtrl.push(ActionSheetPage);
+    } else {
+      this.navCtrl.push(ItemDetailsPage, {
+        item: item
+      });
     }
-    this.navCtrl.push(itemPage, {
-      item: item
-    });
   }
 }
