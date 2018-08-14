@@ -11,12 +11,13 @@ import { BasicAlertPage } from '../pages/basic-alert/basic-alert';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @NgModule({
   declarations: [MyApp,HelloIonicPage,ItemDetailsPage,ListPage,ActionSheetPage,BasicAlertPage],
   imports: [BrowserModule,IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
   entryComponents: [MyApp,HelloIonicPage,ItemDetailsPage,ListPage,ActionSheetPage,BasicAlertPage],
-  providers: [StatusBar,SplashScreen,{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [InAppBrowser,StatusBar,SplashScreen,{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}

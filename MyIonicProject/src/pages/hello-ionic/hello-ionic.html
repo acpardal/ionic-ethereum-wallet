@@ -20,6 +20,9 @@
   </p>
   <p>
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
+    <button ion-button (click)="openWithSystemBrowser('https://www.techiediaries.com')">Open with System browser</button>
+    <button ion-button (click)="openWithInAppBrowser('https://www.techiediaries.com')">Open with In App browser</button>
+    <button ion-button (click)="openWithCordovaBrowser('https://oasisdex.com/')">Open with Cordova browser</button>
   </p>
 
 </ion-content>
