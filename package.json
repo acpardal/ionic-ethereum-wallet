@@ -1,0 +1,25 @@
+{
+  "name": "ionic-ethereum-wallet",
+  "version": "1.0.0",
+  "description": "Ethereum wallet for smartphones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acpardal/ionic-ethereum-wallet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acpardal/ionic-ethereum-wallet/issues"
+  },
+  "homepage": "https://github.com/acpardal/ionic-ethereum-wallet#readme",
+  "devDependencies": {
+    "http-proxy-middleware": "^0.18.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
